@@ -11,10 +11,23 @@ from E_ERR import *
 from ERRA import *
 from ERRI import *
 from ERRV import *
-from SLLROUT import*
+from SLLROUT import *
+from XACC import *
+from XCURCDB import *
+from XCURI import *
+from XCURK import *
+from XCURV import *
+from XRMS import *
+from XRMSD import *
+from XRMSM import *
+from XRMST import *
+from XRMSTD import *
+from XRMSTM import *
+from XSACC import *
+from XVEL import *
 
 
-address = '192.168.0.198' #if running simulator this should be your ip address
+address = '172.31.0.146' #if running simulator this should be your ip address
 port = 701
 soc = socket.socket(socket.AF_INET, socket.SOCK_STREAM, 0)
 
@@ -164,7 +177,7 @@ if __name__ == '__main__':
     getERRV(1)
     getERRV(0)'''
     #SLLROUT TESTS
-    infoSLLROUT()
+    '''infoSLLROUT()
     getSLLROUT()
     getSLLROUT(1)
     getSLLROUT(0)
@@ -179,7 +192,7 @@ if __name__ == '__main__':
     infoSLLROUTARGUEMENTS('001')
     infoSLLROUTARGUEMENTS('101')
     infoSLLROUTARGUEMENTS('201')
-    infoSLLROUTARGUEMENTS('301')
+    infoSLLROUTARGUEMENTS('301')'''
     #SLLIMIT TESTS
     '''getSLLIMIT()
     getSLLIMIT(1)
@@ -202,7 +215,217 @@ if __name__ == '__main__':
     getSRLIMIT()
     getSRLIMIT(1)
     getSRLIMIT(0)'''
-
+    #XACC TESTS
+    '''infoXACC()
+    getXACC()
+    getXACC(1)
+    getXACC(0)
+    setXACC(0, 1)
+    setXACC(1, 2)
+    setXACC(2, 3)
+    setXACC(3, -1)# error code return expected
+    getXACC()
+    getXACC(1)
+    getXACC(0)'''
+    #XCURCDB TESTS
+    '''infoXCURCDB()
+    getXCURCDB()
+    getXCURCDB(1)
+    getXCURCDB(0)
+    setXCURCDB(0, 1)
+    setXCURCDB(1, 2)
+    setXCURCDB(2, 3)
+    setXCURCDB(3, -1)# error code return expected
+    getXCURCDB()
+    getXCURCDB(1)
+    getXCURCDB(0)'''
+    #XCURI TESTS
+    '''infoXCURI()
+    getXCURI()
+    getXCURI(1)
+    getXCURI(0)
+    setXCURI(0, 1)
+    setXCURI(1, 2)
+    setXCURI(2, 3)
+    setXCURI(3, -1)# error code return expected
+    getXCURI()
+    getXCURI(1)
+    getXCURI(0)'''
+    #XCURK TESTS
+    '''infoXCURK()
+    getXCURK()
+    getXCURK(1)
+    getXCURK(0)
+    setXCURK(0, 1)
+    setXCURK(1, 2)
+    setXCURK(2, 3)
+    setXCURK(3, -1)# error code return expected
+    getXCURK()
+    getXCURK(1)
+    getXCURK(0)'''
+    #XCURV TESTS
+    '''infoXCURV()
+    getXCURV()
+    getXCURV(1)
+    getXCURV(0)
+    setXCURV(0, 1)
+    setXCURV(1, 2)
+    setXCURV(2, 3)
+    setXCURV(3, -1)# error code return expected
+    getXCURV()
+    getXCURV(1)
+    getXCURV(0)'''
+    #XRMS TESTS
+    '''infoXRMS()
+    getXRMS()
+    getXRMS(1)
+    getXRMS(0)
+    setXRMS(0, 1)
+    setXRMS(1, 2)
+    setXRMS(2, 3)
+    setXRMS(3, -1)# error code return expected
+    getXRMS()
+    getXRMS(1)
+    getXRMS(0)'''
+    #XRMSD TESTS
+    '''infoXRMSD()
+    getXRMSD()
+    getXRMSD(1)
+    getXRMSD(0)
+    setXRMSD(0, 1)
+    setXRMSD(1, 2)
+    setXRMSD(2, 3)
+    setXRMSD(3, -1)# error code return expected
+    getXRMSD()
+    getXRMSD(1)
+    getXRMSD(0)'''
+    #XRMSM TESTS
+    '''infoXRMSM()
+    getXRMSM()
+    getXRMSM(1)
+    getXRMSM(0)
+    setXRMSM(0, 1)
+    setXRMSM(1, 2)
+    setXRMSM(2, 3)
+    setXRMSM(3, -1)# error code return expected
+    getXRMSM()
+    getXRMSM(1)
+    getXRMSM(0)'''
+    #XRMST TESTS
+    '''infoXRMST()
+    getXRMST()
+    getXRMST(1)
+    getXRMST(0)
+    setXRMST(0, 1)# error code return expected
+    setXRMST(1, 2)# error code return expected
+    setXRMST(2, 3)# error code return expected
+    setXRMST(3, -1)# error code return expected
+    setXRMST(4,199)# error code return expected
+    setXRMST(5,200)
+    setXRMST(6,201)
+    setXRMST(1,3259)# unexpected error code observed
+    setXRMST(2,3260)# unexpected error code observed
+    setXRMST(3,3261)# error code return expected
+    setXRMST(1,3229)
+    setXRMST(2,3230)
+    setXRMST(3,3231)# error code return expected but not seen???
+    getXRMST()
+    getXRMST(1)
+    getXRMST(0)'''
+    #XRMSTD TESTS
+    '''infoXRMSTD()
+    getXRMSTD()
+    getXRMSTD(1)
+    getXRMSTD(0)
+    setXRMSTD(0, 1)# error code return expected
+    setXRMSTD(1, 2)# error code return expected
+    setXRMSTD(2, 3)# error code return expected
+    setXRMSTD(3, -1)# error code return expected
+    setXRMSTD(4,199)# error code return expected
+    setXRMSTD(5,200)
+    setXRMSTD(6,201)
+    setXRMSTD(7,3259)
+    setXRMSTD(8,3260)
+    setXRMSTD(9,3261)
+    setXRMSTD(10,59999)
+    setXRMSTD(11,60000)
+    setXRMSTD(12,60001)# error code return expected
+    getXRMSTD()
+    getXRMSTD(1)
+    getXRMSTD(0)
+    getXRMST()#unexplained 20000 values observed along axis 10 and 11, based on the following XRMSTM default values of 20,000 maybe a bug or issue with memory leak?'''
+    #XRMSTM TESTS
+    '''infoXRMSTM()
+    getXRMSTM()
+    getXRMSTM(1)
+    getXRMSTM(0)
+    setXRMSTM(0, 1)# error code return expected
+    setXRMSTM(1, 2)# error code return expected
+    setXRMSTM(2, 3)# error code return expected
+    setXRMSTM(3, -1)# error code return expected
+    setXRMSTM(4,199)# error code return expected
+    setXRMSTM(5,200)
+    setXRMSTM(6,201)
+    setXRMSTM(7,3259)
+    setXRMSTM(8,3260)
+    setXRMSTM(9,3261)
+    setXRMSTM(10,59999)
+    setXRMSTM(11,60000)
+    setXRMSTM(12,60001)
+    setXRMSTM(13,599999)
+    setXRMSTM(14,600000)
+    setXRMSTM(15,600001)# error code return expected
+    getXRMSTM()
+    getXRMSTM(1)
+    getXRMSTM(0)'''
+    #XSACC TESTS
+    '''infoXSACC()
+    getXSACC()
+    getXSACC(1)
+    getXSACC(0)
+    setXSACC(0, 1)
+    setXSACC(1, 2)
+    setXSACC(2, 3)
+    setXSACC(3, -1)# error code return expected
+    setXSACC(4,199)
+    setXSACC(5,200)
+    setXSACC(6,201)
+    setXSACC(7,3259)
+    setXSACC(8,3260)
+    setXSACC(9,3261)
+    setXSACC(10,59999)
+    setXSACC(11,60000)
+    setXSACC(12,60001)
+    setXSACC(13,599999)
+    setXSACC(14,600000)
+    setXSACC(15,600001)
+    getXSACC()
+    getXSACC(1)
+    getXSACC(0)'''
+    #XVEL TESTS
+    infoXVEL()
+    getXVEL()
+    getXVEL(1)
+    getXVEL(0)
+    setXVEL(0, 1)
+    setXVEL(1, 2)
+    setXVEL(2, 3)
+    setXVEL(3, -1)# error code return expected
+    setXVEL(4,199)
+    setXVEL(5,200)
+    setXVEL(6,201)
+    setXVEL(7,3259)
+    setXVEL(8,3260)
+    setXVEL(9,3261)
+    setXVEL(10,59999)
+    setXVEL(11,60000)
+    setXVEL(12,60001)
+    setXVEL(13,599999)
+    setXVEL(14,600000)
+    setXVEL(15,600001)
+    getXVEL()
+    getXVEL(1)
+    getXVEL(0)
 
 
 

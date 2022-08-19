@@ -1,6 +1,5 @@
 from ACSLowLevel import *
 #found a bug, SLLROUT will allow invalid values
-#ACS documentation also seems to have typos and refers to SLLROUT as SLPROUT
 SLLROUTARGUEMENTS = {
     '0':'According to SLLROUT',
     '001':'From channel 0',

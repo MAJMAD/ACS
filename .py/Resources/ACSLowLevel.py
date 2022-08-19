@@ -18,7 +18,7 @@ def recvall(buffSize):
 
 def ACSConnect(address='10.0.0.100', port=701):
     soc.connect((address, port))
-    soc.settimeout(0.25)
+    soc.settimeout(0.5)
 
 def ReturnCheck():
     check = recvall(1024)

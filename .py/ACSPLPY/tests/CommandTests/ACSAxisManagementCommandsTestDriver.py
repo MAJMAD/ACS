@@ -1,7 +1,7 @@
 import socket, time
-from ACSPLPY.ACSPLPY_Tools.ACSLowLevel import *
-from ACSPLPY.ACSPLPY_Variables.SafetyLimitVariables import *
-from ACSPLPY.ACSPLPY_Commands.AxisManagementCommands import *
+from ...ACSPLPY.ACSPLPY_Tools.ACSLowLevel import *
+from ...ACSPLPY.ACSPLPY_Variables.SafetyLimitVariables import *
+from ...ACSPLPY.ACSPLPY_Commands.AxisManagementCommands import *
 
 address = '192.168.0.198' #if running simulator this should be your ip address
 port = 701

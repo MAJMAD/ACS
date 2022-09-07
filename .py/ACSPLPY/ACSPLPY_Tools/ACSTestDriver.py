@@ -1,5 +1,5 @@
 import socket, time
-from ACSLowLevel import *
+#from ACSLowLevel import *
 #from ACSPLPLUS_Variables.AxisStateVariables import AST
 #from ACSPLPLUS_Variables.SafetyLimitVariables import SLLIMIT, SRLIMIT
 

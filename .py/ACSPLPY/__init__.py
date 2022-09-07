@@ -5,3 +5,4 @@
 from .ACSPLPY_Tools.ACSLowLevel import *
 from .ACSPLPY_Commands import *
 from .ACSPLPY_Variables import *
+from .tests import *
